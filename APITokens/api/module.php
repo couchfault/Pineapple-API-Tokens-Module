@@ -38,7 +38,7 @@ class APITokens extends Module
             $token = hash('sha512', openssl_random_pseudo_bytes(32));
             $name = $this->request->name;
             $this->dbConnection->exec("INSERT INTO api_tokens(token, name) VALUES('%s','%s');", $token, $name);
-            $this->response = array("success" => true, "token" => $token);
+            $this->response = array("success" => true, "token" => $token, "name" => $name);
         } else {
             $this->error = "Missing token name";
         }
