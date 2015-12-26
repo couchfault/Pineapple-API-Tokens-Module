@@ -11,7 +11,6 @@ registerController("APITokenController", ['$api', '$scope', function($api, $scop
             'action': 'getApiTokens'
         }, function(response){
             $scope.apiTokens = response.tokens;
-            console.log(document.getElementById($scope.newToken.token));
         });
     };
 
