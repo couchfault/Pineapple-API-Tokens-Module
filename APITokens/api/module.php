@@ -6,7 +6,7 @@ class APITokens extends Module
 {
     private $dbConnection;
 
-    const DATABASE = "/etc/pineapple/nano.db";
+    const DATABASE = "/etc/pineapple/pineapple.db";
 
     public function __construct($request)
     {
